@@ -5,16 +5,6 @@
 
 #define MAX_CMD_LEN 128
 
-/*
- * This is in general *very* similar to the list_main file seen in lab
- * One big difference is the notion of switching between gradebooks in one
- * run of the program.
- * You have to create or load a gradebook from a file before you can do things
- * like add, lookup, or write.
- * The code below has to check if gradebook is NULL before the operations
- * occur. Also, the user has to explicitly clear the current gradebook before
- * they can create or load in a new one.
- */
 int main(int argc, char **argv) {
     gradebook_t *book = NULL;
 
@@ -85,11 +75,7 @@ int main(int argc, char **argv) {
             }
         }
 
-
-        // TODO Add cases for the other commands
-        // Read in the command and (possibly) additional arguments with scanf()
-       
-        // CLASS NAME (COMPLETE)
+// CLASS NAME (COMPLETE)
         else if (strcmp("class", cmd)==0){
             if (book == NULL) {
                 printf("Error: You must create or load a gradebook first\n");
